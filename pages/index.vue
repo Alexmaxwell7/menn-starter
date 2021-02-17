@@ -2,24 +2,7 @@
   <div class="container">
     <div>
       <h1 class="title">MENN Starter</h1>
-      <div class="links">
-        <a
-          href="https://nuxtjs.org/"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="button--green"
-        >
-          Documentation
-        </a>
-        <a
-          href="https://github.com/nuxt/nuxt.js"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="button--grey"
-        >
-          GitHub
-        </a>
-      </div>
+      <nuxt-link to="/todo">Todo-App</nuxt-link>
     </div>
   </div>
 </template>
@@ -28,6 +11,7 @@
 export default {
   mounted() {
     this.$axios.get('/api').then((res) => {
+      // eslint-disable-next-line no-console
       console.log(res)
     })
   },
